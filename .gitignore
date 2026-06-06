@@ -1,0 +1,8 @@
+node_modules/
+my-backend/node_modules/
+my-frontend/node_modules/
+
+uploads/
+output_plots/
+
+.env
