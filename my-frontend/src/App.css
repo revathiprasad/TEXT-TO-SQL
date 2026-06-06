@@ -1,0 +1,214 @@
+/* App.css */
+
+/* General Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header Styles */
+h1 {
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+/* CSV Data Preview Styles */
+.csv-preview {
+  display: flex;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-width: 1200px; /* Increased max-width */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.csv-preview .columns {
+  width: 200px; /* Fixed width for column names */
+  padding-right: 20px; /* Space between columns and table */
+  border-right: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.csv-preview .table-container {
+  flex: 1; /* Take up remaining space */
+  overflow-x: auto;
+}
+
+.csv-preview table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.csv-preview th,
+.csv-preview td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.csv-preview th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.csv-preview td {
+  word-wrap: break-word;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0); /* Slightly opaque background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2; /* Ensure form is above background */
+  margin-top: 20px; /* Margin to separate from the header */
+}
+
+/* Choose File Box */
+input[type="file"], 
+input[type="text"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid rgba(52, 152, 219, 0.9); /* Border color with higher opacity */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9); /* Light background color with higher opacity */
+}
+
+/* Button Styles */
+button {
+  background-color: rgba(1, 180, 249, 0.9); /* Button color with higher opacity */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 148, 214, 0.9); /* Button hover color with higher opacity */
+}
+
+/* Result Box Styles */
+.result-box {
+  background-color: rgba(0, 0, 0, 0); /* Light background color with higher opacity */
+  color: #050709; /* Dark text color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Result Table Styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+}
+
+table, th, td {
+  border: 1px solid rgb(0, 0, 0); /* Border color with higher opacity */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: rgba(189, 195, 199, 0.9); /* Light header background color with higher opacity */
+  color: #2c3e50; /* Dark header text color */
+}
+
+/* Error Styles */
+.error {
+  color: red;
+  margin-top: 20px;
+}
+
+/* Plot Images */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background Animation */
+.background-animation {
+  position: fixed; /* Fix background in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind other content */
+}
+
+/* Loader Styles */
+.loader {
+  position: fixed; /* Fixed positioning for loader */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px; /* Adjust size */
+  height: 120px; /* Adjust size */
+  z-index: 9999; /* Ensure loader is above all other content */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loader div {
+  width: 20px; /* Size of balls */
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(52, 152, 219, 0.9); /* Ball color with higher opacity */
+  animation: bounce 1s infinite ease-in-out;
+}
+
+/* Different sizes and colors for added complexity */
+.loader div:nth-child(2) {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(231, 76, 60, 0.9); /* Transparent red ball with higher opacity */
+  animation-delay: 0.2s;
+}
+
+.loader div:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(241, 196, 15, 0.9); /* Transparent yellow ball with higher opacity */
+  animation-delay: 0.4s;
+}
+
+/* Keyframes for bouncing animation */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-40px); /* Bounce height */
+  }
+}
+
+/* Ensure content does not overflow */
+.container {
+  overflow: hidden;
+}
+ 
